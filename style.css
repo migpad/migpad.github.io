@@ -1,0 +1,201 @@
+/* The one page of migpad.com, in English and Russian: no fonts, scripts or images from elsewhere. */
+
+:root {
+    color-scheme: light dark;
+    --text: #1d1f23;
+    --muted: #5c6370;
+    --background: #ffffff;
+    --panel: #f3f5f9;
+    --line: #dde2ea;
+    --accent: #2f6fde;
+    --accent-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #e6e8ec;
+        --muted: #a0a7b4;
+        --background: #16181d;
+        --panel: #1f232b;
+        --line: #2e3440;
+        --accent: #4d8eff;
+        --accent-text: #0b1530;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Ubuntu, Cantarell, sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+a {
+    color: var(--accent);
+}
+
+header,
+main,
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header {
+    position: relative;
+    padding-top: 56px;
+    text-align: center;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 8px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 44px;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    margin: 8px auto 0;
+    max-width: 560px;
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.screenshot img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.language {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 14px;
+}
+
+h2 {
+    margin: 56px 0 16px;
+    font-size: 26px;
+}
+
+.platforms {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* macOS has one file: Windows and Linux take the room of their rows of buttons. */
+@media (min-width: 860px) {
+    .platforms {
+        grid-template-columns: 0.8fr 1.1fr 1.1fr;
+    }
+}
+
+.platform {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+}
+
+.platform h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.platform p {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.arch {
+    width: 44px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--accent-text);
+    background: var(--accent);
+}
+
+.button.secondary {
+    color: var(--accent);
+    background: transparent;
+    box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+code {
+    font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    padding: 1px 4px;
+    border-radius: 4px;
+    background: var(--line);
+}
+
+.note {
+    margin-top: 16px;
+    color: var(--muted);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 8px 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.features li {
+    padding: 8px 0;
+}
+
+.features strong {
+    display: block;
+}
+
+footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--muted);
+}
+
+footer p {
+    margin: 4px 0;
+}

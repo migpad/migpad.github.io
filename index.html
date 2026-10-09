@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MigPad — a fast text editor for macOS, Linux and Windows</title>
+    <meta name="description" content="MigPad is a small, fast text editor in the spirit of AkelPad for macOS, Linux and Windows: careful with encodings, it loses nothing and never goes online.">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon-256.png">
+    <link rel="alternate" hreflang="en" href="https://migpad.com/">
+    <link rel="alternate" hreflang="ru" href="https://migpad.com/ru/">
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        // A browser in Russian gets the page in Russian, unless the English one was chosen there.
+        if (!location.search.includes("en") && (navigator.languages || [navigator.language])[0]?.startsWith("ru")) {
+            location.replace("/ru/");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="language"><a href="/ru/" hreflang="ru" lang="ru">Русский</a></nav>
+        <img src="/icon.svg" alt="" width="96" height="96">
+        <h1>MigPad</h1>
+        <p class="tagline">A small, fast text editor for macOS, Linux and Windows, in the spirit of AkelPad.</p>
+        <picture class="screenshot">
+            <source srcset="/screenshot-en-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="/screenshot-en-light.png" alt="MigPad with two tabs: release notes in Markdown, and a list in Windows-1251" width="860" height="520">
+        </picture>
+    </header>
+    <main>
+        <h2 id="download">Download</h2>
+        <div class="platforms">
+            <section class="platform">
+                <h3>macOS</h3>
+                <div class="buttons">
+                    <a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad.dmg">MigPad.dmg</a>
+                </div>
+                <p>macOS 10.15.7 or later, Apple silicon and Intel. Drag MigPad to Applications.</p>
+            </section>
+            <section class="platform">
+                <h3>Windows</h3>
+                <div class="buttons">
+                    <div class="row"><span class="arch">x64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x64-setup.exe">Installer</a><a class="button secondary" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x64-portable.zip">ZIP</a></div>
+                    <div class="row"><span class="arch">ARM64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-arm64-setup.exe">Installer</a><a class="button secondary" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-arm64-portable.zip">ZIP</a></div>
+                </div>
+                <p>Windows 10 version 1903 or later and Windows 11. The ZIP is portable: MigPad keeps its data next to it. MigPad is not signed yet: if SmartScreen warns about it, choose More info, then Run anyway.</p>
+            </section>
+            <section class="platform">
+                <h3>Linux</h3>
+                <div class="buttons">
+                    <div class="row"><span class="arch">x64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-amd64.deb">.deb</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-x86_64.rpm">.rpm</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x86_64.AppImage">AppImage</a></div>
+                    <div class="row"><span class="arch">ARM64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-arm64.deb">.deb</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-aarch64.rpm">.rpm</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-aarch64.AppImage">AppImage</a></div>
+                </div>
+                <p>Ubuntu 22.04, Debian 12, Fedora 36 and later, with a Vulkan driver. The AppImage runs without installing, once made executable.</p>
+            </section>
+        </div>
+        <p class="note">MigPad never goes online, so it does not look for updates: new versions are here and on <a href="https://github.com/migpad/migpad/releases">GitHub</a>, with <a href="https://github.com/migpad/migpad/blob/main/CHANGELOG.md">what changed</a>.</p>
+
+        <h2>What it is</h2>
+        <ul class="features">
+            <li><strong>Instant</strong> It starts at once, uses little memory and keeps large files responsive.</li>
+            <li><strong>Careful with text</strong> Unicode and legacy encodings — Windows-1251, KOI8-R, CP866 and more — their detection, BOM, LF, CRLF and CR line endings; saving never loses a character unnoticed.</li>
+            <li><strong>Nothing is lost</strong> Edits are saved as you type: quitting asks nothing and brings back the windows, tabs and unsaved changes, even after a crash.</li>
+            <li><strong>Find and replace</strong> With regular expressions, whole words and case; go to a line and column.</li>
+            <li><strong>Offline</strong> No telemetry, accounts or online services.</li>
+            <li><strong>Everything built in</strong> No plugins to collect: tabs and windows, a command line, settings in a text file, English and Russian.</li>
+        </ul>
+    </main>
+    <footer>
+        <p>MigPad is open source under the <a href="https://github.com/migpad/migpad/blob/main/LICENSE">MIT License</a> · <a href="https://github.com/migpad/migpad">GitHub</a> · © 2026 Iaroslav Vorobev</p>
+        <p>This site keeps no cookies and loads nothing from other sites.</p>
+    </footer>
+</body>
+</html>
