@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MigPad — быстрый текстовый редактор для macOS, Linux и Windows</title>
+    <meta name="description" content="MigPad — маленький быстрый текстовый редактор в духе AkelPad для macOS, Linux и Windows: бережно работает с кодировками, ничего не теряет и не обращается в сеть.">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon-256.png">
+    <link rel="alternate" hreflang="en" href="https://migpad.com/">
+    <link rel="alternate" hreflang="ru" href="https://migpad.com/ru/">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav class="language"><a href="/?en" hreflang="en" lang="en">English</a></nav>
+        <img src="/icon.svg" alt="" width="96" height="96">
+        <h1>MigPad</h1>
+        <p class="tagline">Маленький быстрый текстовый редактор для macOS, Linux и Windows в духе AkelPad.</p>
+    </header>
+    <main>
+        <h2 id="download">Скачать</h2>
+        <div class="platforms">
+            <section class="platform">
+                <h3>macOS</h3>
+                <div class="buttons">
+                    <a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad.dmg">MigPad.dmg</a>
+                </div>
+                <p>macOS 10.15.7 и новее, Apple silicon и Intel. Перетащите MigPad в «Программы».</p>
+            </section>
+            <section class="platform">
+                <h3>Windows</h3>
+                <div class="buttons">
+                    <div class="row"><span class="arch">x64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x64-setup.exe">Установщик</a><a class="button secondary" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x64-portable.zip">ZIP</a></div>
+                    <div class="row"><span class="arch">ARM64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-arm64-setup.exe">Установщик</a><a class="button secondary" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-arm64-portable.zip">ZIP</a></div>
+                </div>
+                <p>Windows 10 версии 1903 и новее и Windows 11. ZIP — портативная версия: данные хранятся рядом с программой. MigPad пока не подписан: если SmartScreen предупредит, нажмите «Подробнее», затем «Выполнить в любом случае».</p>
+            </section>
+            <section class="platform">
+                <h3>Linux</h3>
+                <div class="buttons">
+                    <div class="row"><span class="arch">x64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-amd64.deb">.deb</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-x86_64.rpm">.rpm</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-x86_64.AppImage">AppImage</a></div>
+                    <div class="row"><span class="arch">ARM64</span><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-arm64.deb">.deb</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/migpad-aarch64.rpm">.rpm</a><a class="button" href="https://github.com/migpad/migpad/releases/latest/download/MigPad-aarch64.AppImage">AppImage</a></div>
+                </div>
+                <p>Ubuntu 22.04, Debian 12, Fedora 36 и новее, с драйвером Vulkan. AppImage работает без установки, если сделать файл исполняемым.</p>
+            </section>
+        </div>
+        <p class="note">MigPad не обращается в сеть и поэтому не проверяет обновления: новые версии — здесь и на <a href="https://github.com/migpad/migpad/releases">GitHub</a>, вместе со <a href="https://github.com/migpad/migpad/blob/main/CHANGELOG.md">списком изменений</a>.</p>
+
+        <h2>Что это</h2>
+        <ul class="features">
+            <li><strong>Мгновенный</strong> Запускается сразу, расходует мало памяти и не тормозит на больших файлах.</li>
+            <li><strong>Бережный к тексту</strong> Unicode и старые кодировки — Windows-1251, KOI8-R, CP866 и другие, — их определение, BOM, переводы строк LF, CRLF и CR; при сохранении ни один символ не пропадёт незаметно.</li>
+            <li><strong>Ничего не теряется</strong> Правки сохраняются по ходу набора: при выходе вопросов нет, а окна, вкладки и несохранённые правки возвращаются — даже после сбоя.</li>
+            <li><strong>Поиск и замена</strong> С регулярными выражениями, словом целиком и регистром; переход к строке и столбцу.</li>
+            <li><strong>Без сети</strong> Ни телеметрии, ни аккаунтов, ни онлайн-сервисов.</li>
+            <li><strong>Всё встроено</strong> Плагины собирать не нужно: вкладки и окна, командная строка, настройки в текстовом файле, русский и английский.</li>
+        </ul>
+    </main>
+    <footer>
+        <p>MigPad — открытая программа под <a href="https://github.com/migpad/migpad/blob/main/LICENSE">лицензией MIT</a> · <a href="https://github.com/migpad/migpad">GitHub</a> · © 2026 Iaroslav Vorobev</p>
+        <p>Сайт не хранит cookie и ничего не загружает с других сайтов.</p>
+    </footer>
+</body>
+</html>
