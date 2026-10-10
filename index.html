@@ -11,15 +11,15 @@
     <link rel="alternate" hreflang="ru" href="https://migpad.com/ru/">
     <link rel="stylesheet" href="/style.css">
     <script>
-        // A browser in Russian gets the page in Russian, unless the English one was chosen there.
-        if (!location.search.includes("en") && (navigator.languages || [navigator.language])[0]?.startsWith("ru")) {
+        // A browser in Russian gets the page in Russian, unless the user chose English.
+        if (localStorage.getItem("migpad-lang") !== "en" && (navigator.languages || [navigator.language])[0]?.startsWith("ru")) {
             location.replace("/ru/");
         }
     </script>
 </head>
 <body>
     <header>
-        <nav class="language"><a href="/ru/" hreflang="ru" lang="ru">Русский</a></nav>
+        <nav class="language"><a href="/ru/" hreflang="ru" lang="ru" onclick="localStorage.removeItem('migpad-lang')">Русский</a></nav>
         <img src="/icon.svg" alt="" width="96" height="96">
         <h1>MigPad</h1>
         <p class="tagline">A small, fast text editor for macOS, Linux and Windows, in the spirit of AkelPad.</p>
